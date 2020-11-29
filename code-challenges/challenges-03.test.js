@@ -334,6 +334,9 @@ This challenge should use the array of meetings from challenge 9, above.
 Sort the meetings in the order that they start. If two meetings start at the same time on the same day, the shorter meeting should come first.
 
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
+
+ let reg = /\b[Oo]ct(ober)*\b/g;
+
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
