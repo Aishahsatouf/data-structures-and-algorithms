@@ -298,6 +298,15 @@ describe('Testing challenge 9', () => {
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  arr.sort(function(a,b){
+     if (a.lastName<b.lastName){return (-1);}
+     else if (a.lastName>b.lastName){return(1);}
+     else if (a.firstName<b.firstName){return (-1);}
+     else if (a.firstName>b.firstName){return (1);}
+     else if(a.age<b.age){return(-1);}
+     else if (a.age>b.age){return(1);}
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -324,6 +333,17 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    if (a.dayOfWeek === 'Monday') {return (-1);}
+    else if (b.dayOfWeek === 'Monday') {return (1);}
+    if (a.dayOfWeek === 'Tuesday' && b.dayOfWeek === 'Wednesday') {return (-1);}
+    else if (b.dayOfWeek === 'Tuesday' && a.dayOfWeek === 'Wednesday'){return (1);}
+    if (a.dayOfWeek === 'Wednesday' && b.dayOfWeek === 'Thursday') {return (-1);}
+    else if (b.dayOfWeek === 'Wednesday' && a.dayOfWeek === 'Thursday') {return (1);}
+    if (a.dayOfWeek === 'Thursday' && b.dayOfWeek === 'Friday') {return (-1);}
+    else if (b.dayOfWeek === 'Thursday' && a.dayOfWeek === 'Friday') { return (1);}
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -341,6 +361,24 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => {
+    if(a.dayOfWeek === b.dayOfWeek) {
+      if (a.start > b.start) {
+        return 1;
+      } else if (a.start < b.start) {
+        return -1;
+      } else {
+        if (a.end > b.end) {
+          return 1;
+        } else if (a.end < b.end) {
+          return -1;
+        }
+      }
+    } else {
+      return 0;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -358,6 +396,7 @@ $ = createSnippetWithJQuery(`
 
 const addPearClass = () => {
   // Solution code here...
+  $('#fruits li').eq(2).addClass('pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -455,7 +494,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
@@ -476,7 +515,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0, 2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
@@ -486,7 +525,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
@@ -499,7 +538,7 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-xdescribe('Testing challenge 12', () => {
+describe('Testing challenge 12', () => {
   test('It should add a class of pear to the thrid li', () => {
     addPearClass();
     expect($('li:nth-child(3)').hasClass('pear')).toBe(true);

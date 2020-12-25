@@ -126,6 +126,11 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  if(board[row][col] === '#'){
+    return 'hit';
+  } else {
+    return 'miss'
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -138,6 +143,9 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   // Solution code here...
+  let product = 1;
+  numbers.forEach(arr => arr.forEach(number => product *= number));
+  return product;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,6 +166,15 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
+  let sum = 0;
+  let num = 0;
+  for(let week = 0; week < weather.length; week++){
+    for(let day = 0; day < weather[week].length; day ++){
+      sum += weather[week][day];
+      num++
+    }
+  }
+  return sum/num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -179,6 +196,18 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
+  let lowest = 100000;
+  for(let week = 0; week < weather.length; week++){
+    let sum = 0;
+    let num = 0;
+    for(let day = 0; day < weather[week].length; day ++){
+      sum += weather[week][day];
+      num++
+    }
+    let average = sum/num
+    if(average < lowest) lowest = average;
+  }
+  return lowest;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -195,6 +224,22 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
+  let array = (str.split('\n'));
+  let arr = [];
+  for(let i = 0; i < array.length; i++){
+    arr.push(array[i].split(','))
+  }
+  console.log('arr is',arr)
+  let avgs = [];
+  for(let x = 0; x < arr.length; x++){
+    let sum = 0;
+    for(let y = 0; y < arr[x].length; y++){
+      sum += Number(arr[x][y]);
+      console.log('value is',arr[x][y],'sum is',sum);
+    }
+    avgs.push(sum);
+  }
+  return avgs;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -250,7 +295,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   const battleshipData = [
     ['#', ' ', '#', ' '],
     ['#', ' ', '#', ' '],
@@ -269,7 +314,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should multiply all the numbers together', () => {
     expect(calculateProduct([[1, 2], [3, 4], [5, 6]])).toStrictEqual(720);
   });
@@ -282,20 +327,20 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should calculate and return the average temperature of the data set', () => {
     expect(averageDailyTemperature(weeklyTemperatures)).toStrictEqual(60.25);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return the lowest weekly average temperature within the data set', () => {
     expect(lowestWeeklyAverage(weeklyTemperatures)).toStrictEqual(57);
     expect(lowestWeeklyAverage(lowestWeeklyTemperatureData)).toStrictEqual(46);
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return the total count for each row', () => {
     let result = excel('1,1,1\n4,4,4\n9,9,9');
     expect(result.length).toStrictEqual(3);
