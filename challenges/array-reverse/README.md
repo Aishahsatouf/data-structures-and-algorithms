@@ -12,4 +12,4 @@ to solve this problem I created new varaible array and looped over this array in
 *Test:* [test link](https://repl.it/@Aishahsatouf/arrayreverse#index.js)
 
 ## Solution
-![array-reverse](../assets/reverse.PNG)
+![array-reverse](../../assets/reverse.PNG)
