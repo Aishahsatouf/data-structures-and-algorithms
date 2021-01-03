@@ -27,6 +27,26 @@ const node=require('./../Data-structure/linkedList/node');
      it('will return a string that is the same as expected',()=>{
          expect(linkedList.toString()).toBe('{3} -->{2} -->{1} -->NULL');
      });
+     it('add a node to the end of the linked list',()=>{
+        expect(linkedList.append(4).toString()).toEqual('{3} -->{2} -->{1} -->{4} -->NULL'); 
+     });
+     it('Can successfully add multiple nodes to the end of a linked list',()=>{
+        linkedList.append(5);
+        linkedList.append(6);
+        expect(linkedList.toString()).toEqual('{3} -->{2} -->{1} -->{4} -->{5} -->{6} -->NULL');
+    });
+    it ('Can successfully insert a node before a node located i the middle of a linked list',()=>{
+      expect(linkedList.insertBefore(1,7).toString()).toBe('{3} -->{2} -->{7} -->{1} -->{4} -->{5} -->{6} -->NULL')
+    });
+    it('Can successfully insert a node before the first node of a linked list',()=>{
+        expect(linkedList.insertBefore(3,8).toString()).toBe('{8} -->{3} -->{2} -->{7} -->{1} -->{4} -->{5} -->{6} -->NULL') 
+    });
+    it ('Can successfully insert after a node in the middle of the linked list',()=>{
+        expect(linkedList.insertAfter(7,9).toString()).toBe('{8} -->{3} -->{2} -->{7} -->{9} -->{1} -->{4} -->{5} -->{6} -->NULL')
+    });
+    it ('Can successfully insert a node after the last node of the linked list',()=>{
+        expect(linkedList.insertAfter(6,10).toString()).toBe('{8} -->{3} -->{2} -->{7} -->{9} -->{1} -->{4} -->{5} -->{6} -->{10} -->NULL') 
+    });
  });
 
  describe('Node Modules',()=>{
