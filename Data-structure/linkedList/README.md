@@ -37,3 +37,7 @@ you can run (npm test linked-list.test.js)
 
 ## API
 ![singly linked list](./../../assets/linked-list.PNG)
+
+![challenge 6](./../../assets/chal6.PNG)
+
+![challenge 7](./../../assets/chal7.PNG)

@@ -103,5 +103,31 @@ class LinkedList {
     };
 
   }
+  kthFromEnd(k){
+    if(typeof(k)!=='number'||k<0){return 'This value is invalid'};
+    if(!this.head){return 'this linked list is empty'};
+    let currentNode=this.head;
+    let length= -1;
+    while(currentNode){
+      currentNode=currentNode.next;
+      length=length+1;
+    }
+    if(length==0){return `this list contains only one value ${this.head.value}`}
+    if(length<k){
+      return 'Exception'
+    }else if(length>=k){
+      currentNode=this.head;
+      let counter=0;
+      while(currentNode){
+        let position=length-counter;
+       if(position==k){
+         return currentNode.value;
+       }
+       counter=counter+1
+       currentNode=currentNode.next 
+      }
+    }
+    
+  }
 }
 module.exports = LinkedList;

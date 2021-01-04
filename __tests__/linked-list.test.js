@@ -47,6 +47,23 @@ const node=require('./../Data-structure/linkedList/node');
     it ('Can successfully insert a node after the last node of the linked list',()=>{
         expect(linkedList.insertAfter(6,10).toString()).toBe('{8} -->{3} -->{2} -->{7} -->{9} -->{1} -->{4} -->{5} -->{6} -->{10} -->NULL') 
     });
+    it (' kthFromEnd() returns error Where k is greater than the length of the linked list',()=>{
+        expect(linkedList.kthFromEnd(15)).toBe('Exception') 
+    });
+    it (' returns the value of the head Where k is equal to the length of the linked list',()=>{
+        expect(linkedList.kthFromEnd(9)).toBe(8) 
+    });
+    it ('returns an error if the value of k is less than zero',()=>{
+        expect(linkedList.kthFromEnd(-5)).toBe('This value is invalid') 
+    });
+    it ('returns an error if the size of list is 1',()=>{
+        let linkedListII = new LinkedList();
+         linkedListII.insert(2);
+        expect(linkedListII.kthFromEnd(2)).toBe('this list contains only one value 2') 
+    });
+    it ('test the output',()=>{
+        expect(linkedList.kthFromEnd(2)).toBe(5) 
+    });
  });
 
  describe('Node Modules',()=>{
