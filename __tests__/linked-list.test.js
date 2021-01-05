@@ -1,6 +1,7 @@
 'use strict';
 const LinkedList=require('./../Data-structure/linkedList/linked-list');
 const node=require('./../Data-structure/linkedList/node');
+const zipLists = require('../Data-structure/llZip/ll-zip.js');
  describe('linked List Modules',()=>{
      let linkedList = new LinkedList();
      it ('can intanciate empty linked list',()=>{
@@ -74,3 +75,55 @@ const node=require('./../Data-structure/linkedList/node');
       expect(newNode.next).toEqual(null);
   })
  });
+
+ describe('LL-Zip Modules',()=>{
+  it('can zip two lists',()=>{
+      let ll1= new LinkedList();
+      ll1.append(1);
+      ll1.append(3);
+      ll1.append(2);
+      let ll2= new LinkedList();
+      ll2.append(5);
+      ll2.append(9);
+      ll2.append(4);
+    expect(zipLists(ll1,ll2).toString()).toEqual('{1} -->{5} -->{3} -->{9} -->{2} -->{4} -->NULL');
+  });
+  it ('can zip list if first is empty',()=>{
+      let ll2=new LinkedList();
+      ll2.append(1);
+      ll2.append(2);
+      ll2.append(3);
+      let ll1= new LinkedList();
+      expect(zipLists(ll1,ll2).toString()).toEqual('{1} -->{2} -->{3} -->NULL');
+  });
+  it ('can zip lists if the second is empty',()=>{
+    let ll1=new LinkedList();
+    ll1.append(1);
+    ll1.append(2);
+    ll1.append(3);
+    let ll2= new LinkedList();
+    expect(zipLists(ll1,ll2).toString()).toEqual('{1} -->{2} -->{3} -->NULL'); 
+  });
+  it ('can zip lists if first is shorter',()=>{
+    let ll1=new LinkedList();
+    ll1.append(1);
+    let ll2= new LinkedList();
+    ll2.append(2);
+    ll2.append(3);
+    expect(zipLists(ll1,ll2).toString()).toEqual('{1} -->{2} -->{3} -->NULL');
+  });
+  it ('can zip lists if the second is shorter',()=>{
+    let ll1=new LinkedList();
+    ll1.append(1);
+    ll1.append(2);
+    ll1.append(3);
+    let ll2= new LinkedList();
+    ll2.append(4);
+    expect(zipLists(ll1,ll2).toString()).toEqual('{1} -->{4} -->{2} -->{3} -->NULL');
+  });
+  it('returns null if both empty',()=>{
+      let ll1=new LinkedList();
+      let ll2= new LinkedList();
+      expect(zipLists(ll1,ll2).toString()).toEqual('NULL');
+  })
+ })
