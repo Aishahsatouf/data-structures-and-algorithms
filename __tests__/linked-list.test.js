@@ -1,7 +1,7 @@
 'use strict';
 const LinkedList=require('./../Data-structure/linkedList/linked-list');
 const node=require('./../Data-structure/linkedList/node');
-const zipLists = require('../Data-structure/llZip/ll-zip.js');
+const zipLists = require('../Data-structure/linkedList/llZip/ll-zip');
  describe('linked List Modules',()=>{
      let linkedList = new LinkedList();
      it ('can intanciate empty linked list',()=>{

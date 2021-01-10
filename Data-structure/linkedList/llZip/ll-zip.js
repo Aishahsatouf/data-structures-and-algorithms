@@ -1,6 +1,6 @@
 'use strict';
 
-const List=require('../linkedList/linked-list.js');
+const List=require('../linked-list.js');
 
 function zipLists(l1, l2){
     // if one of those lists is empty return the other as the merged one;
