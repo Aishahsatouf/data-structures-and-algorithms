@@ -10,6 +10,15 @@
 
  * [Linked List](./Data-Structure/linkedList/README.md)
 
+ * [llZip](./Data-Structure/linkedList/llZip/README.md)
+
+ * [Stack And Queues](./Data-structure/stacksAndQueues/README.md)
+
+ * [Queue With Stack](./Data-structure/stacksAndQueues/QueueWithStack/README.md)
+
+
+
+
  
 
 

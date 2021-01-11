@@ -2,6 +2,7 @@
 
 const Stack=require('../Data-structure/stacksAndQueues/stack');
 const Queue=require('../Data-structure/stacksAndQueues/queue');
+const PseudoQueue = require('../Data-structure/stacksAndQueues/QueueWithStack/queue-with-stacks');
 
 describe('Stack class',()=>{
     let stack =new Stack();
@@ -78,4 +79,30 @@ describe('Queues',()=>{
       expect(()=>{queue.dequeue()}).toThrow();
       expect(()=>{queue.peek()}).toThrow();
   });
+});
+
+describe('Pseudoqueue',()=>{
+    let pseudo=new PseudoQueue();
+    it ('Can successfully instantiate an empty queue',()=>{
+        expect(pseudo.isEmpty()).toBe(true);
+    });
+    it ('Can successfully enqueue into a queue',()=>{
+       pseudo.enqueue(1);
+       expect(pseudo.Stack1.top.value).toEqual(1);
+    });
+    it ('Can successfully enqueue multiple values into a queue',()=>{
+        pseudo.enqueue(2);
+        pseudo.enqueue(3);
+        pseudo.enqueue(4);
+        expect(pseudo.Stack1.top.value).toEqual(4);
+    });
+    it('Can successfully dequeue out of a queue the expected value',()=>{
+        expect(pseudo.dequeue().value.value).toEqual(1);
+    });
+    it('Calling dequeue on empty queue raises exception',()=>{
+        while(!pseudo.isEmpty()){
+            pseudo.dequeue();
+        }
+        expect(()=>{pseudo.dequeue()}).toThrow();
+    });
 });
