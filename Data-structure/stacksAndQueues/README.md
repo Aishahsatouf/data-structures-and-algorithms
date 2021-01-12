@@ -13,4 +13,4 @@ tests are provided in the `__tests__` folder in `stackAndQueues.test.js`,`Stack 
 
 
 ## API
-![]()
+![stack and queue](../../assets/stack-queue.png)

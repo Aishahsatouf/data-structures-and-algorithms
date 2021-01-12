@@ -16,6 +16,10 @@
 
  * [Queue With Stack](./Data-structure/stacksAndQueues/QueueWithStack/README.md)
 
+ * [fifo Animal Shilter](./Data-structure/stacksAndQueues/fifoAnimalShelter/README.md)
+
+ * [multi brackets Validation](./challenges/multiBracketValidation/README.md)
+
 
 
 
