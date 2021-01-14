@@ -17,5 +17,9 @@ describe('functiona;ity of the multiBracketsfunction',()=>{
         let string2='()[[Extra Characters]]';
         expect(multiBracketValidation(string)).toBe(true);
         expect(multiBracketValidation(string2)).toBe(true);
-    })
-})
+    });
+    it('will return false if brackets matched openning and closing but not type',()=>{
+        let string='[}(){[}]';
+        expect(multiBracketValidation(string)).toBe(false);
+    });
+});
