@@ -1,24 +1,18 @@
 # Data Structures and Algorithms
 
 **Code challenges list**
- 
- * [Array Reverse](./challenges/array-reverse/README.md)
-
- * [Array Shift](./challenges/arrayShift/README.md)
-
- * [Binary Search](./challenges/BinarySearch/README.md)
-
- * [Linked List](./Data-Structure/linkedList/README.md)
-
- * [llZip](./Data-Structure/linkedList/llZip/README.md)
-
- * [Stack And Queues](./Data-structure/stacksAndQueues/README.md)
-
- * [Queue With Stack](./Data-structure/stacksAndQueues/QueueWithStack/README.md)
-
- * [fifo Animal Shilter](./Data-structure/stacksAndQueues/fifoAnimalShelter/README.md)
-
- * [multi brackets Validation](./challenges/multiBracketValidation/README.md)
+ |Challenge | Documentation|
+ | ---------- | ---------- |
+ | Array Reverse |  [Link](./challenges/array-reverse/README.md) |
+ | Array Shift   |  [Link](./challenges/arrayShift/README.md) |
+ | Binary Search |  [Link](./challenges/BinarySearch/README.md) |
+ | Linked List   |  [Link](./Data-Structure/linkedList/README.md) |
+ | llZip         |  [Link](./Data-Structure/linkedList/llZip/README.md) |
+ | Stack And Queues | [Link](./Data-structure/stacksAndQueues/README.md) |
+ | Queue With Stack | [Link](./Data-structure/stacksAndQueues/QueueWithStack/README.md) |
+ | fifo Animal Shilter | [Link](./Data-structure/stacksAndQueues/fifoAnimalShelter/README.md) |
+ | multi brackets Validation | [Link](./challenges/multiBracketValidation/README.md) |
+ | Binary Search Tree | [Link](./Data-structure/trees/README.md) |
 
 
 
