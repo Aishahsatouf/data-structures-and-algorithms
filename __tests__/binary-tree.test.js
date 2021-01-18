@@ -51,5 +51,9 @@ describe ('Binary tree class ',()=>{
     it('Will return true if the value is contained',()=>{
         expect(testTree.contains(25)).toBe(true);
     });
+    it('Will return the maximum value',()=>{
+        expect(testTree.findMaximumValue()).toBe(50);
+    });
+
 
 });

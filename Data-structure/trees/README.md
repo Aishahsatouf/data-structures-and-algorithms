@@ -29,6 +29,9 @@ this folder contains an implementation to a data structure which is trees and ho
 **contains**
 * Time:O(n)
 *Space:O(h)
+**find Maximum**
+* Time with binary tree O(n),with binary search tree O(log(n))
+* Space O(1) 
 
 ## API
 

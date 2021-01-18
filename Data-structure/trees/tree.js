@@ -81,6 +81,13 @@ class BinaryTree {
         if(!isContaine)return false
         else return true;
     }
+    findMaximumValue() {
+        let currentNode = this.root;
+        while (currentNode.right) {
+            currentNode = currentNode.right;
+        }
+        return currentNode.value;
+    }
 }
 
 module.exports= BinaryTree
