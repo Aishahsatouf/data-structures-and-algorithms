@@ -14,6 +14,8 @@
  | multi brackets Validation | [Link](./challenges/multiBracketValidation/README.md) |
  | Binary Search Tree | [Link](./Data-structure/trees/README.md) |
 
+| Fizz Buzz | [Link](./challenges/fizzBuzzTree/README.md)
+
 
 
 
