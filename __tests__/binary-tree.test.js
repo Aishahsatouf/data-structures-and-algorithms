@@ -1,7 +1,7 @@
 'use strict';
 
 const Node=require('../Data-structure/trees/node');
-const BinaryTree=require('../Data-structure/trees/tree');
+const BinaryTree=require('../Data-structure/trees/binary-search');
 
 describe ('Binary tree class ',()=>{
 
@@ -52,8 +52,10 @@ describe ('Binary tree class ',()=>{
         expect(testTree.contains(25)).toBe(true);
     });
     it('Will return the maximum value',()=>{
-        expect(testTree.findMaximumValue()).toBe(50);
+        expect(testTree.findMaximumValues()).toBe(50);
     });
-
-
+    it ('Will return the results from breadth first traverse',()=>{
+        let expectedResult=[30,20,40,10,25,35,50];
+        expect(testTree.breadthFirst()).toEqual(expectedResult);
+    });
 });

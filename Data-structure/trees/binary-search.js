@@ -1,44 +1,12 @@
 'use strict';
 const Node = require('./node');
+const BinaryTree=require('./binary-tree');
 
-class BinaryTree {
-    constructor() {
-        this.root = null;
-    };
-    preOrder() {
-        if (!this.root) { throw new Error('this is empty tree'); }
-        let results = [];
-        let _traverse = (node) => {
-            results.push(node.value);
-            if (node.left) _traverse(node.left);
-            if (node.right) _traverse(node.right);
-        };
-        _traverse(this.root);
-        return results;
-
-    };
-    postOrder() {
-        if (!this.root) {throw new Error('this is empty tree');}
-        let results = [];
-        let _traverse = (node) => {
-            if (node.left) _traverse(node.left);
-            if (node.right) _traverse(node.right);
-            results.push(node.value);
-        };
-        _traverse(this.root);
-        return results;
-    };
-    inOrder() {
-        if (!this.root) { throw new Error('this is empty tree');}
-        let results = [];
-        let _traverse = (node) => {
-            if (node.left) _traverse(node.left);
-            results.push(node.value);
-            if (node.right) _traverse(node.right);
-        };
-        _traverse(this.root);
-        return results;
-    };
+class BinarysearchTree extends BinaryTree{
+    // constructor() {
+    //     this.root = null;
+    // };
+   
     add(input){
       if(typeof input !='number'){throw new Error(`you can't compare an add to binary search tree`)}
       let newNode = new Node(input);
@@ -81,7 +49,7 @@ class BinaryTree {
         if(!isContaine)return false
         else return true;
     }
-    findMaximumValue() {
+    findMaximumValues() {
         let currentNode = this.root;
         while (currentNode.right) {
             currentNode = currentNode.right;
@@ -90,4 +58,4 @@ class BinaryTree {
     }
 }
 
-module.exports= BinaryTree
+module.exports= BinarysearchTree
