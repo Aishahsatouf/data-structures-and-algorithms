@@ -1,4 +1,4 @@
-const insertionSort = require('../insrtion-sort/insrtion-sort');
+const insertionSort = require('../challenges/insrtion-sort/insrtion-sort');
 
 describe('insertion sort functionallity',()=>{
 
