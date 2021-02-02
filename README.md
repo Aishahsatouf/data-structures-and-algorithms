@@ -13,9 +13,9 @@
  | fifo Animal Shilter | [Link](./Data-structure/stacksAndQueues/fifoAnimalShelter/README.md) |
  | multi brackets Validation | [Link](./challenges/multiBracketValidation/README.md) |
  | Binary Search Tree | [Link](./Data-structure/trees/README.md) |
-
-| Fizz Buzz | [Link](./challenges/fizzBuzzTree/README.md)
-
+ | Fizz Buzz | [Link](./challenges/fizzBuzzTree/README.md)       |
+ | Sort Array | [Link](./challenges/insrtion-sort/README.md)       |
+ | Merge Sort | [Link](./challenges/merge-sort/README.md)       |
 
 
 
