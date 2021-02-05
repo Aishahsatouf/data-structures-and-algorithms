@@ -54,3 +54,5 @@ Space : O(n)
 
 ## Solution
 
+![mergesort](./assets/mergesort.PNG)
+
