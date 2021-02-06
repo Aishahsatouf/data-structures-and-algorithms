@@ -32,5 +32,5 @@ Implement a Hashtable with the following methods:
 you can run (npm test hashtable.test.js)
 
 ## API
-![hash](./assets/hastable1.png)
+![hash](./assets/hashtable1.png)
 
