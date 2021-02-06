@@ -1,4 +1,4 @@
-# merge Sort:
+# Quick Sort:
 Author : Aishah Satouf
 
 ## Challenge Summary
