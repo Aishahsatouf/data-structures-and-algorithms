@@ -16,6 +16,9 @@
  | Fizz Buzz | [Link](./challenges/fizzBuzzTree/README.md)       |
  | Sort Array | [Link](./challenges/insrtion-sort/README.md)       |
  | Merge Sort | [Link](./challenges/merge-sort/README.md)       |
+ | Quick Sort | [Link](./challenges/quick-sort/README.md)       |
+ |  Hash Table | [Link](./Data-Structure/hashtable/README.md)   |
+
 
 
 
