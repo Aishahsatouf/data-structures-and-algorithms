@@ -13,20 +13,24 @@ Implement a Hashtable with the following methods:
 **set**
  * Time:O(1)
  * Space:O(1)
+ 
 **get**
+
  * Time:O(1)
  * Space:O(n)
+ 
 **contains**
  * Time:O(1)
- *Space:O(1)
-**hash**
+ * Space:O(1)
+ 
+ **hash**
 * Time:O(1)
-*Space:O(1)
+* Space:O(1)
 
 
 *Test:* 
 you can run (npm test hashtable.test.js)
 
 ## API
-![singly linked list](./../../assets/hastable1.png)
+![hash](./assets/hastable1.png)
 
