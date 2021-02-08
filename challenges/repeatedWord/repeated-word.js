@@ -2,7 +2,7 @@
 const HashTable=require ('../../Data-structure/hashtable/hashtable');
 function repeatedWord(str){
     if(typeof str!=='string'){throw new Error};
-    let newStr=str.replace(/[^\w\s]/gi, '').toUpperCase();
+    let newStr=str.replace(/[^\w\s]/gi, '').toLowerCase();
     let newArr=newStr.split(' ')
    //console.log(newArr);
     let hash=new HashTable(1000);
