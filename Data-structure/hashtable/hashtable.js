@@ -50,9 +50,9 @@ class HashTable {
     set(key, value) {
         // create a new LinkedList inst, 
         // or add to the current one if exists.
-        if(Key&&!value){
-            throw new Error;
-        }
+        // if(Key&&!value){
+        //     throw new Error;
+        // }
         let hash = this.hash(key);
         if (!this.table[hash]) {
             this.table[hash] = new LinkedList();
