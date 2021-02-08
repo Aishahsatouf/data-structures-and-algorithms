@@ -20,4 +20,4 @@ Run `npm test repeated-word.test.js`
 
 ## Solution
 
-![fizz](./assets/repeat.PNG)
+![repeated words](./assets/repeat.PNG)
