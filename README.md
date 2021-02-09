@@ -18,7 +18,8 @@
  | Merge Sort | [Link](./challenges/merge-sort/README.md)       |
  | Quick Sort | [Link](./challenges/quick-sort/README.md)       |
  |  Hash Table | [Link](./Data-structure/hashtable/README.md)   |
-
+ |  Repeated word | [Link](./challenges/repeatedWord/README.md) |
+ |  Tree Intersection | [Link](./challenges/treeIntersection/README.md) |
 
 
 

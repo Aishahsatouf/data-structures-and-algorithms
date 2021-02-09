@@ -1,0 +1,30 @@
+const [BinaryTree,treeIntersection]=require('../challenges/treeIntersection/tree-intersection')
+let tree =  new BinaryTree;
+let tree2 = new BinaryTree;
+tree.add(150)
+tree.add(100)
+tree.add(250)
+tree.add(75)
+tree.add(160)
+tree.add(200)
+tree.add(125)
+tree.add(175)
+tree.add(300)
+tree.add(500)
+
+tree2.add(42)
+tree2.add(100)
+tree2.add(600)
+tree2.add(15)
+tree2.add(160)
+tree2.add(4)
+tree2.add(200)
+tree2.add(125)
+tree2.add(350)
+tree2.add(175)
+tree2.add(500)
+describe('tree Intersection implementation ',()=>{
+ it ('will return an array of intersectioned values between two trees',()=>{
+     expect(treeIntersection(tree,tree2).toString()).toBe([100,600,160,200,125,350,175,500].toString())
+ })
+})

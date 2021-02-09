@@ -3,9 +3,6 @@ const Node = require('./node');
 const BinaryTree=require('./binary-tree');
 
 class BinarysearchTree extends BinaryTree{
-    // constructor() {
-    //     this.root = null;
-    // };
    
     add(input){
       if(typeof input !='number'){throw new Error(`you can't compare an add to binary search tree`)}
