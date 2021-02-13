@@ -59,23 +59,44 @@ class HashTable {
         }
         const entry = { [key]: value }; // this is an object but can be anything
         this.table[hash].add(entry);
-        if(this.table[hash].add(entry))return('the value is in the data structure')
+        if (this.table[hash].add(entry)) return ('the value is in the data structure')
     }
     get(key) {
-    
-        var index = this.hash(key);
-        var value = this.table[index];
-         
-        if (value) return value.values();
-        else return "this hashtable does not include this key value";
+
+        if (!this.contains(key)) return null;
+
+        let index = this.hash(key);
+        let current = this.table[index].head;
+
+        while (current) {
+            let keyOfObject = Object.keys(current.value);
+            let valueOfObject = Object.values(current.value);
+            if (keyOfObject[0] === key) {
+                return valueOfObject[0];
+            }
+            current = current.next;
+        }
     }
     contains(key) {
-        var index = this.hash(key);
-        var value = this.table[index];
-        if (value) return true;
-        else return false;
+        if (!this.table) return false;
+        let index = this.hash(key);
+        if (!this.table[index]) return false;
+        let answer;
+        let current = this.table[index].head;
+        while (current) {
+            let keyOfObject = Object.keys(current.value);
+            if (keyOfObject[0] === key) {
+                return answer = true;
+            }
+            if (!current.next) {
+                return answer = false;
+            }
+            current = current.next;
+        }
+        return answer;
     }
-
 }
+
+
 
 module.exports = HashTable;

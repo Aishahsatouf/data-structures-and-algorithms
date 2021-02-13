@@ -25,6 +25,6 @@ tree2.add(175)
 tree2.add(500)
 describe('tree Intersection implementation ',()=>{
  it ('will return an array of intersectioned values between two trees',()=>{
-     expect(treeIntersection(tree,tree2).toString()).toBe([100,600,160,200,125,350,175,500].toString())
+     expect(treeIntersection(tree,tree2).toString()).toBe([100,160,200,125,175,500].toString())
  })
 })
