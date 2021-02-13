@@ -13,13 +13,13 @@ describe('HashTable Implmentation methods',()=>{
       expect(hashTable.contains('name')).toBeTruthy();
     });
     it ('will return the value stored if retrieving throught the key',()=>{
-        expect(hashTable.get('name')[0].name).toBe('Sara');
+        expect(hashTable.get('name')).toBe('Sara');
     });
     it ('Successfully returns null for a key that does not exist in the hashtable',()=>{
         expect(hashTable.contains('age')).toBeFalsy();
     });
     it ('will return the value stored if retrieving throught the key',()=>{
-        expect(hashTable2.get('name')[2].name).toBe('Dana');
+        expect(hashTable2.get('name')).toBe('Sara');
     });
     it('Will hash a key to an in-range value',()=>{
         let condition= hashTable2.hash('age')<=500
