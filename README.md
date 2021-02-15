@@ -19,7 +19,12 @@
  | Quick Sort | [Link](./challenges/quick-sort/README.md)       |
  |  Hash Table | [Link](./Data-structure/hashtable/README.md)   |
  |  Repeated word | [Link](./challenges/repeatedWord/README.md) |
- |  Tree Intersection | [Link](./challenges/treeIntersection/README.md) |
+ |  Tree Intersection | [Link](./challenges/leftJoin/README.md) |
+ |  Left Join | [Link](./challenges/treeIntersection/README.md) |
+ |  Graphs | [Link](./Data-structure/graph/README.md) |
+ |  Graphs breadth first traverse | [Link](./Data-structure/graph/breadth-first/README.md) |
+ |  Graphs Get Edges | [Link](./Data-structure/graph/get-edges/README.md) |
+ 
 
 
 
