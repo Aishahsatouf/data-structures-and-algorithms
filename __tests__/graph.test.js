@@ -1,5 +1,6 @@
 const [Node, Graph] = require('../Data-structure/graph/graph');
-const bfs = require('../Data-structure/graph/breadth-first-graph/breadth-first')
+const bfs = require('../Data-structure/graph/breadth-first-graph/breadth-first');
+const dfs = require('../Data-structure/graph/depth-first/depth-first')
 const getEdge=require('../Data-structure/graph/get-edges/get-edges')
 const graph = new Graph();
 
@@ -96,5 +97,16 @@ describe('implementation of graphs', () => {
   });
   it('should return true and the edge weight summation for the connected nodes', () => {
   expect(getEdge([vertex, vertexTwo, vertexThree],graph2)).toEqual([true, 249]);
+});
+it('will return the result of the dfs based on the node started', () => {
+  // graph.addNode(seven);
+  // graph.addNode(eight);
+  // graph.addDirectedEdge(three, seven);
+  // graph.addDirectedEdge(eight, two);
+  // graph.addDirectedEdge(three, six);
+  expect(dfs(two,graph)).toEqual([ 2, 3, 7, 6 ]);
+  expect(dfs(eight,graph)).toEqual([  8, 2, 3, 7, 6 ]);
+
+
 });
 });

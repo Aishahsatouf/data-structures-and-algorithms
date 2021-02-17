@@ -24,6 +24,7 @@
  |  Graphs | [Link](./Data-structure/graph/README.md) |
  |  Graphs breadth first traverse | [Link](./Data-structure/graph/breadth-first/README.md) |
  |  Graphs Get Edges | [Link](./Data-structure/graph/get-edges/README.md) |
+ |  Graphs Depth First traverse | [Link](./Data-structure/graph/depth-first/README.md) |
  
 
 
